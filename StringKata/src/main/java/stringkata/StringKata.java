@@ -6,7 +6,7 @@ public class StringKata {
 		if(numericString == null || numericString.isEmpty()) {
 			return 0;
 		}
-		String[] numericStringArray = numericString.split(",");
+		String[] numericStringArray = numericString.split(",|\n");
 		for(String str: numericStringArray) {
 			sum+=Integer.parseInt(str);
 		}

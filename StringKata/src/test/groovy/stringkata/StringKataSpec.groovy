@@ -18,12 +18,13 @@ class StringKataSpec extends Specification {
 				expectedResult == result
 			
 			where:
-				numericString	|	expectedResult
-				null			|	0
-				""				|	0
-				"1"				|	1		
-				"1,2"			|	3
-				"1,3,5"			| 	9
-				"1\n3,5\n6"		| 	15
+				numericString		|	expectedResult
+				null				|	0
+				""					|	0
+				"1"					|	1		
+				"1,2"				|	3
+				"1,3,5"				| 	9
+				"1\n3,5\n6"			| 	15
+				"1\n3,5\n6//;\n1;2"	|	18
 		}
 }

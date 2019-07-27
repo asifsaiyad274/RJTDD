@@ -6,10 +6,16 @@ public class StringKata {
 		if(numericString == null || numericString.isEmpty()) {
 			return 0;
 		}
-		String[] numericStringArray = numericString.split(",|\n");
+		
+		numericString = numericString.replace("//", "");
+		String[] numericStringArray = numericString.split(",|\n|;");
+		
 		for(String str: numericStringArray) {
-			sum+=Integer.parseInt(str);
+			if(!str.isEmpty()) {
+				sum+=Integer.parseInt(str);
+			}
 		}
+		
 		return sum;
 	}
 }

@@ -16,3 +16,9 @@ dependencies {
 		'com.athaydes:spock-reports:1.2.7'
 	)
 }
+
+test{
+	testLogging{
+		showStandardStreams = true
+	}
+}

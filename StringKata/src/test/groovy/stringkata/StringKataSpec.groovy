@@ -6,6 +6,14 @@ import spock.lang.Specification
 
 class StringKataSpec extends Specification {
 	
+		def setupSpec() {
+			print('setupSpec called !');
+		}
+	
+		def setup() {
+			print('setup called !');
+		}
+		
 		def 'Simple String calculator'(){
 			given:
 			def stringKata = new StringKata();
@@ -16,5 +24,13 @@ class StringKataSpec extends Specification {
 			
 			then:
 			result == 0
+		}
+		
+		def cleanup() {
+			print('cleanup called !');
+		}
+		
+		def cleanupSpec() {
+			print('cleanupSpec called !');
 		}
 }

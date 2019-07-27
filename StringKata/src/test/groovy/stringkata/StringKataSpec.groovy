@@ -1,10 +1,20 @@
 package stringkata;
 
+import org.spockframework.compiler.model.SetupBlock
+
 import spock.lang.Specification
 
 class StringKataSpec extends Specification {
-		def 'this is expect clause'(){
-			expect:
-			Math.max(1, 2) == 2
+	
+		def 'Simple String calculator'(){
+			given:
+			def stringKata = new StringKata();
+			def result
+			
+			when:
+			result = stringKata.calculateSum("")
+			
+			then:
+			result == 0
 		}
 }

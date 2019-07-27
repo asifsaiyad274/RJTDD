@@ -22,5 +22,7 @@ class StringKataSpec extends Specification {
 				null			|	0
 				""				|	0
 				"1"				|	1		
+				"1,2"			|	3
+				"1,3,5"			| 	9
 		}
 }

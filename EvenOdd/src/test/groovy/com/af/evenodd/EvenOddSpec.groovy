@@ -20,6 +20,8 @@ class EvenOddSpec extends Specification {
 			returnArray()			|	null
 			returnArray(0)			|	"even"
 			returnArray(1,2)		|	"odd"
+			returnArray(2,5,34,6)	|	"odd"
+			returnArray(0,-1,-5)	|	"even"
 	}
 	
 	private def returnArray(int... array) {

@@ -11,7 +11,7 @@ public class EvenOdd {
 		if(numericArray == null || numericArray.length == 0) {
 			return null;
 		}
-		if(IntStream.of(numericArray).sum()/2 == 0) {
+		if(Math.abs(IntStream.of(numericArray).sum())%2 == 0) {
 			return "even";
 		}
 		return "odd";

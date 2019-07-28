@@ -1,5 +1,8 @@
 package stringkata;
 
+/**
+ * Based on https://osherove.com/tdd-kata-1 : Sting Calculator Kata
+ */
 public class StringKata {
 	public int calculateSum(String numericString){
 		int sum = 0;

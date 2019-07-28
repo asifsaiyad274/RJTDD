@@ -1,21 +1,22 @@
 package stringkata;
 
-import org.spockframework.compiler.model.SetupBlock
+import spock.lang.Specification;
 
-import spock.lang.Specification
-
+/**
+ * Based on https://osherove.com/tdd-kata-1 : Sting Calculator Kata
+ */
 class StringKataSpec extends Specification {
 	
 		def 'Simple String calculator'(){
 			given:
 				def stringKata = new StringKata();
-				def result
+				def result;
 			
 			when:
 				result = stringKata.calculateSum(numericString)
 			
 			then:
-				expectedResult == result
+				expectedResult == result;
 			
 			where:
 				numericString				|	expectedResult
@@ -33,14 +34,14 @@ class StringKataSpec extends Specification {
 		def 'Simple String calculator : Negative Test Cases'(){
 			given:
 				def stringKata = new StringKata();
-				def error
+				def error;
 			
 			when:
-				result = stringKata.calculateSum(numericString)
+				result = stringKata.calculateSum(numericString);
 			
 			then:
-				error = thrown(expectedException)
-				error.message == expectedMessage
+				error = thrown(expectedException);
+				error.message == expectedMessage;
 			where:
 				numericString		|		expectedException		|		expectedMessage
 				"1\n3,-5\n6"		|	NegativeNotAllowedExpection	|	"Negatives not allowed : -5"

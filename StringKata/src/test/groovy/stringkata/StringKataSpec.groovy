@@ -23,8 +23,25 @@ class StringKataSpec extends Specification {
 				""					|	0
 				"1"					|	1		
 				"1,2"				|	3
-				"1,3,5"				| 	9
+				"1,3,5"				| 	9 
 				"1\n3,5\n6"			| 	15
 				"1\n3,5\n6//;\n1;2"	|	18
 		}
+		
+		def 'Simple String calculator : Negative Test Cases'(){
+			given:
+				def stringKata = new StringKata();
+				def error
+			
+			when:
+				result = stringKata.calculateSum(numericString)
+			
+			then:
+				error = thrown(expectedException)
+				error.message == expectedMessage
+			where:
+				numericString		|		expectedException		|		expectedMessage
+				"1\n3,-5\n6"		|	NegativeNotAllowedExpection	|	"Negatives not allowed : -5"
+		}
+		
 }

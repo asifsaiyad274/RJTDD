@@ -1,7 +1,7 @@
 package stringkata;
 
 public class StringKata {
-	public int calculateSum(String numericString) {
+	public int calculateSum(String numericString){
 		int sum = 0;
 		if(numericString == null || numericString.isEmpty()) {
 			return 0;
@@ -10,9 +10,14 @@ public class StringKata {
 		numericString = numericString.replace("//", "");
 		String[] numericStringArray = numericString.split(",|\n|;");
 		
-		for(String str: numericStringArray) {
-			if(!str.isEmpty()) {
-				sum+=Integer.parseInt(str);
+		for(String strNumber: numericStringArray) {
+			if(!strNumber.isEmpty()) {
+				int number = Integer.parseInt(strNumber);
+				if(number>=0) {
+					sum+=Integer.parseInt(strNumber);
+					continue;
+				}
+				throw new NegativeNotAllowedExpection("Negatives not allowed : "+number);
 			}
 		}
 		

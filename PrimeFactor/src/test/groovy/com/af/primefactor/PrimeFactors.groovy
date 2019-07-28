@@ -17,7 +17,7 @@ class PrimeFactorsSpec extends Specification {
 		where:
 			number		|		expectedResult
 			100			|	[2,2,5,5]
-		
+			2			|	[2]
 	}
 	
 }

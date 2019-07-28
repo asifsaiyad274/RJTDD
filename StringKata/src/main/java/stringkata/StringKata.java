@@ -14,11 +14,11 @@ public class StringKata {
 		for(String strNumber: numericStringArray) {
 			if(!strNumber.isEmpty()) {
 				int number = Integer.parseInt(strNumber);
-				if(number>=0) {
+				if(number>=0 && number<=1000) {
 					sum+=Integer.parseInt(strNumber);
-					continue;
+				}else if(number<0) {
+					negativeValueMessage.append(number).append(" ");
 				}
-				negativeValueMessage.append(number).append(" ");
 			}
 		}
 		

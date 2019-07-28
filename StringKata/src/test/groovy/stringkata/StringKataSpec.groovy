@@ -42,6 +42,8 @@ class StringKataSpec extends Specification {
 			where:
 				numericString		|		expectedException		|		expectedMessage
 				"1\n3,-5\n6"		|	NegativeNotAllowedExpection	|	"Negatives not allowed : -5"
+				"1\n-3,-5\n6"		|	NegativeNotAllowedExpection	|	"Negatives not allowed : -3 -5"
+				"1\n-3,-5\n-6"		|	NegativeNotAllowedExpection	|	"Negatives not allowed : -3 -5 -6"
 		}
 		
 }

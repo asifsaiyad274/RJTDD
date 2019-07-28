@@ -9,6 +9,7 @@ public class StringKata {
 		
 		numericString = numericString.replace("//", "");
 		String[] numericStringArray = numericString.split(",|\n|;");
+		StringBuilder negativeValueMessage = new StringBuilder("Negatives not allowed : "); 
 		
 		for(String strNumber: numericStringArray) {
 			if(!strNumber.isEmpty()) {
@@ -17,8 +18,12 @@ public class StringKata {
 					sum+=Integer.parseInt(strNumber);
 					continue;
 				}
-				throw new NegativeNotAllowedExpection("Negatives not allowed : "+number);
+				negativeValueMessage.append(number).append(" ");
 			}
+		}
+		
+		if(negativeValueMessage.indexOf("-") > 0) {
+			throw new NegativeNotAllowedExpection(negativeValueMessage.toString().trim());
 		}
 		
 		return sum;

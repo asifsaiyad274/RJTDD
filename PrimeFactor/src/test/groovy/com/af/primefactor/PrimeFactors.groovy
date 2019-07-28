@@ -18,6 +18,8 @@ class PrimeFactorsSpec extends Specification {
 			number		|		expectedResult
 			100			|	[2,2,5,5]
 			2			|	[2]
+			1			|	[]
+			0			|	[]
 	}
 	
 }

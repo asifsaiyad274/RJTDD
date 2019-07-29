@@ -1,0 +1,24 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+dependencies {
+	testCompile(
+		'junit:junit:4.12',
+		'org.spockframework:spock-core:1.0-groovy-2.4',
+		'org.jmockit:jmockit:1.8'
+		)
+	testRuntime(
+		'com.athaydes:spock-reports:1.2.7'
+	)
+}
+
+test{
+	testLogging{
+		showStandardStreams = true
+	}
+}

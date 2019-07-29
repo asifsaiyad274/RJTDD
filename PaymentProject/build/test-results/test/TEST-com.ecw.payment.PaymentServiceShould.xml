@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ecw.payment.PaymentServiceShould" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-07-29T11:09:51" hostname="ATLANTISPC-612" time="0.019">
+  <properties/>
+  <testcase name="process payment" classname="com.ecw.payment.PaymentServiceShould" time="0.019">
+    <failure message="groovy.lang.MissingMethodException: No signature of method: com.ecw.payment.PaymentService.processPayment() is applicable for argument types: (com.ecw.payment.User, com.ecw.payment.PaymentDetails) values: [com.ecw.payment.User@4e8adfd2, com.ecw.payment.PaymentDetails@5e5637b3]" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.ecw.payment.PaymentService.processPayment() is applicable for argument types: (com.ecw.payment.User, com.ecw.payment.PaymentDetails) values: [com.ecw.payment.User@4e8adfd2, com.ecw.payment.PaymentDetails@5e5637b3]
+	at com.ecw.payment.PaymentServiceShould.process payment(PaymentServiceShould.groovy:13)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jul 29, 2019 7:09:51 AM org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSiteNoUnwrap invoke
+INFO: Configuring com.athaydes.spockframework.report.SpockReportExtension
+Jul 29, 2019 7:09:51 AM org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSiteNoUnwrap invoke
+INFO: SpockReports config loaded: [com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension:md, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile:/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.IReportCreator:com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile:/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss:spock-summary-report.css, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName:summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss:spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks:false, com.athaydes.spockframework.report.outputDir:build/spock-reports]
+Jul 29, 2019 7:09:51 AM org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSiteNoUnwrap invoke
+INFO: Loading settings for reportCreator of type com.athaydes.spockframework.report.internal.HtmlReportCreator
+]]></system-err>
+</testsuite>

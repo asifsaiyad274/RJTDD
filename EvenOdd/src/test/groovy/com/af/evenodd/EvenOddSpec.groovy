@@ -10,9 +10,9 @@ class EvenOddSpec extends Specification {
 	
 	def 'Specification should return even or odd for sum of numbers'(){
 		given:
-			def result;
+			def result
 		when:
-			result = EvenOdd.isSumEvenOrOdd(numericArray);
+			result = EvenOdd.isSumEvenOrOdd(numericArray)
 		then:
 			expectedResult == result
 		where:
@@ -25,7 +25,7 @@ class EvenOddSpec extends Specification {
 	}
 	
 	private def returnArray(int... array) {
-		return array;		
+		return array
 	}
 	
 }

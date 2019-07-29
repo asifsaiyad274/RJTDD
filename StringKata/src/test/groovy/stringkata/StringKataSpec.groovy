@@ -1,12 +1,14 @@
 package stringkata;
 
 import spock.lang.Specification;
+import spock.lang.Unroll
 
 /**
  * Based on https://osherove.com/tdd-kata-1 : Sting Calculator Kata
  */
 class StringKataSpec extends Specification {
 	
+		@Unroll
 		def 'Simple String calculator'(){
 			given:
 				def stringKata = new StringKata();
